@@ -4,19 +4,19 @@
 
 <table>
   <tr>
-    <td class='number'><b>№</b></td>
+    <td class='top_line'><b>№</b></td>
     <td><b>Описание</b></td>
     <td><b>Ссылка на работу</b></td>
   </tr>
   <tr>
-    <td><b>1</b></td>
+    <td class='number'><b>1</b></td>
     <td>Виселица</td>
-    <td></td>
+    <td class='link'></td>
   </tr>
   <tr>
-    <td><b>2</b></td>
+    <td class='number'><b>2</b></td>
     <td></td>
-    <td></td>
+    <td class='link'></td>
   </tr>
  </table>
 
