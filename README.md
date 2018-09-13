@@ -4,7 +4,7 @@
 
 №|Описание|Ссылка на работу
 :---|:---|:---
-**1**|Игра "Виселица"|*[Код](https://github.com/polyankaglade/proga2k18/tree/master/HW/HW1)*
+**1**|Игра "Виселица"|*[Код](https://github.com/polyankaglade/proga2k18/blob/master/HW/HW1/%D0%B2%D0%B8%D1%81%D0%B5%D0%BB%D0%B8%D1%86%D0%B0.py)*
 **2**||*Код*
 **3**||*Код*
 
