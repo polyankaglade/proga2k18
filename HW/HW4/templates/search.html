@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Выберите параметры поиска.</h1>
+<form method='GET'  action='/results' target="_blank">
+    <label>Возраст: <input type="number" name="age"></label><br>
+	<label>Родной язык: <input type="text" name="lang1"></label><br>
+	<label>Место рождения (город): <input type="text" name="born"></label><br>
+	<label>Место проживания (город): <input type="text" name="habit"></label><br>
+	Уровень образования:
+		<label><input type="checkbox" name="edu" value="mid" checked> среднее</label>
+		<label><input type="checkbox" name="edu" value="nhigh" checked> неоконченное высшее</label>
+		<label><input type="checkbox" name="edu" value="high" checked> высшее</label>
+		<label><input type="checkbox" name="edu" value="other" checked> другое</label>
+	<br>
+	<label>Лингвист:
+	<select name="ling">
+		<option value=""> неважно</option>
+		<option value="да">да</option>
+		<option value="нет">нет</option>
+	</select></label><br>
+    <input type="submit" value="Отправить">
+</form>
+{% endblock %}

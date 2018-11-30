@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Спасибо, что заглянули сюда.</h1>
+<p>Для участия в опросе, пожалуйста, заполните все поля ниже.</p>
+<form method="POST" action="/thank_you">
+<fieldset>
+    <legend>Информация об участнике</legend>
+    <label>Имя: <input type="text" name="name" placeholder="Вася Пупкин" required> </label><br>
+    <label>Возраст (числом): <input type="number" name="age" min="1" max="150" placeholder="20" required></label><br>
+	<label>Родной язык: <input type="text" name="lang1" placeholder="русский" required></label><br>
+	<label>Место рождения (город): <input type="text" name="born" placeholder="Воронеж" required></label><br>
+	<label>Место проживания (город): <input type="text" name="habit" placeholder="Санкт-Петербург" required></label><br>
+	<label>Уровень образования:
+	<select name="edu">
+		<option value="mid"> среднее</option>
+		<option value="nhigh"> неоконченное высшее</option>
+		<option value="high"> высшее</option>
+		<option value="other"> другое</option>
+	</select></label><br>
+    <label> <input type="checkbox" name="ling"> Я лингвист</label><br>
+</fieldset>
+<fieldset>
+    <legend>Опрос</legend>
+	<img src="{{url_for('static', filename='1.jpg')}}" / alt="1" height="250"><br>
+	<label>Что изображено на рисунке сверху? <input type="text" name="answers" placeholder="одним словом" required> </label><br>
+	<img src="{{url_for('static', filename='2.jpg')}}" / alt="2" height="250"><br>
+	<label>Что изображено на рисунке сверху? <input type="text" name="answers" placeholder="одним словом, в ед. числе" required> </label><br>
+	<img src="{{url_for('static', filename='3.jpg')}}" / alt="3" height="250"><br>
+	<label>Что изображено на рисунке сверху? <input type="text" name="answers" placeholder="одним словом" required> </label><br>
+	<img src="{{url_for('static', filename='4.jpg')}}" / alt="4" height="250"><br>
+	<label>Что изображено на рисунке сверху? <input type="text" name="answers" placeholder="одним словом" required> </label><br>
+</fieldset>
+<p>Перед отправкой, пожалуйста, проверьте правильность введенных вами данных.</p>
+	<input type="submit" value="Отправить">
+</form>
+{% endblock %}

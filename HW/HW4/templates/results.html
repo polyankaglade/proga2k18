@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Поиск по следующим параметрам</h1>
+<ul>
+	<li>Возраст: {{age}},</li>
+	<li>Язык: {{lang1}},</li>
+	<li>Город рождения: {{born}},</li>
+	<li>Город проживания: {{habit}},</li>
+	<li>Уровень образования: {% for i in edu%} {{i}},{%endfor%}</li>
+	<li>Статус (лингвист/не лингвист): {{ling}}.</li>
+</ul>
+<h1>Результаты</h1>
+{% for i in results%}
+	{{', '.join(i.split(' - ')[:-1])}}: 
+	<b>{{i.split(' - ')[-1]}}</b>
+	<br>{%endfor%}
+{% endblock %}
