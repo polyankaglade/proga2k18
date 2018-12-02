@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="post-preview">
+              <h2 class="post-title">
+                Всего анкет: {{corpus_volume}}
+              </h2>
+			  <p class="post-meta">
+			  на {{date}}
+			  </p>
+</div>
+<hr>
+<div class="post-preview">
+              <h2 class="post-title">
+                Возраст опрошенных
+              </h2>
+              <p class="post-subtitle">
+                от {{min_age}} до {{max_age}}
+              </p>
+</div>
+<hr>
+<div class="post-preview">
+              <h2 class="post-title">
+                Топ 5 городов рождения
+              </h2>
+              <p class="post-subtitle">
+                {% for i in borns%}
+				{{i[0]}}<br>
+				{%endfor%}
+              </p>
+</div>
+<hr>
+<div class="post-preview">
+              <h2 class="post-title">
+                Топ 5 городов проживания
+              </h2>
+              <p class="post-subtitle">
+                {% for i in habits%}
+				{{i[0]}}<br>
+				{%endfor%}
+              </p>
+</div>
+<hr>
+<div class="post-preview">
+              <h2 class="post-title">
+                Уровень образования
+              </h2>
+              <p class="post-subtitle">
+			  
+	<div id="graph" class="graph horizontal">
+		<div class="item" style="width:{{edus['mid']*3}}%; background-color: #ffc107">{{edus['mid']}}</div>среднее
+		<div class="item" style="width:{{edus['nhigh']*3}}%; background-color: #28a745">{{edus['nhigh']}}</div>неоконченнное высшее
+		<div class="item" style="width:{{edus['high']*3}}%; background-color: #20c997">{{edus['high']}}</div>высшее 
+		<div class="item" style="width:{{edus['other']*3}}%; background-color: #17a2b8">{{edus['other']}}</div>другое
+		</p>
+	</div>
+</div>
+<hr>
+<div class="post-preview">
+              <h2 class="post-title">
+                Соотношение лингвистов и не лингвистов
+              </h2>
+              <p class="post-subtitle">
+                Лингвисты: {{lings['да']}}<br>
+				Не лингвисты: {{lings['нет']}}
+              </p>
+</div>
+</div>
+{% endblock %}

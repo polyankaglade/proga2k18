@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Спасибо, что заглянули сюда.</h1>
+<p>Для участия в опросе, пожалуйста, заполните все поля ниже.</p>
+<form method="POST" action="/thank_you">
+<div class="post-preview">
+	<h2 class="post-title"><legend>Информация об участнике</legend></h2>
+	<div class="control-group">
+        <div class="form-group floating-label-form-group controls">
+                <label>Имя</label>
+                <input type="text" name="name" placeholder="Вася Пупкин" required>
+                <p class="help-block text-danger"></p>
+         </div>
+    </div>
+    <div class="control-group">
+        <div class="form-group floating-label-form-group controls">
+                <label>Возраст (числом)</label>
+                <input type="number" name="age" min="1" max="150" placeholder="20" required>
+                <p class="help-block text-danger"></p>
+         </div>
+    </div><div class="control-group">
+        <div class="form-group floating-label-form-group controls">
+                <label>Родной язык</label>
+                <input type="text" name="lang1" placeholder="русский" required>
+                <p class="help-block text-danger"></p>
+         </div>
+    </div><div class="control-group">
+        <div class="form-group floating-label-form-group controls">
+                <label>Место рождения (город)</label>
+                <input type="text" name="born" placeholder="город рождения" required>
+                <p class="help-block text-danger"></p>
+         </div>
+    </div><div class="control-group">
+        <div class="form-group floating-label-form-group controls">
+                <label>Место проживания (город)</label>
+                <input type="text" name="habit" placeholder="город проживания" required>
+                <p class="help-block text-danger"></p>
+         </div>
+    </div><div class="control-group">
+        <div class="form-group floating-label-form-group controls">
+                <p style="font-size: 20px">Уровень образования
+                <select name="edu">
+		<option value="mid"> среднее</option>
+		<option value="nhigh"> неоконченное высшее</option>
+		<option value="high"> высшее</option>
+		<option value="other"> другое</option>
+	</select></p>
+                <p class="help-block text-danger"></p>
+         </div>
+    </div><div class="control-group">
+        <div class="form-group floating-label-form-group controls">
+                <label></label>
+                <p style="font-size: 20px"><input type="checkbox" name="ling"> Я лингвист</p>
+                <p class="help-block text-danger"></p>
+         </div>
+    </div>
+</fieldset></div>
+
+<div class="post-preview">
+<fieldset>
+    <br><h2 class="post-title"><legend>Опрос</legend></h2><br>
+	<img class="img-fluid" src="{{url_for('static', filename='1.jpg')}}" / alt="1"><br>
+	<label><p>Что изображено на рисунке сверху?</p><input type="text" name="answers" placeholder="одним словом" required> </label><br>
+	<img class="img-fluid" src="{{url_for('static', filename='2.jpg')}}" / alt="2"><br>
+	<label><p>Что изображено на рисунке сверху?</p> <input type="text" name="answers" placeholder="одним словом, в ед. числе" required> </label><br>
+	<img class="img-fluid" src="{{url_for('static', filename='3.jpg')}}" / alt="3"><br>
+	<label><p>Что изображено на рисунке сверху?</p><input type="text" name="answers" placeholder="одним словом" required> </label><br>
+	<img class="img-fluid" src="{{url_for('static', filename='5.jpg')}}" / alt="4"><br>
+	<label><p>Что изображено на рисунке сверху?</p><input type="text" name="answers" placeholder="одним словом" required> </label><br>
+</fieldset></div>
+<p><i>Перед отправкой, пожалуйста, проверьте правильность введенных вами данных.</i></p>
+	<button type="submit" class="btn btn-primary" id="sendMessageButton">Отправить</button>
+</form>
+{% endblock %}
