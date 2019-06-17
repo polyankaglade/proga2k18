@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Введите ваш код авторизации.</h1>
+<form method="POST" action="/technical">
+<div class="post-preview">
+<fieldset>
+	<div class="control-group">
+        <div class="form-group floating-label-form-group controls">
+                <label>Введите ваш персональный код</label>
+<input type="text" name="code" placeholder="например: GuFH25473hnJxw2538GzLKG121avOIG2489Vif1000yrgzw139kfMQI519JqapmJ764wVL0558V" required>
+                <p class="help-block text-danger"></p>
+         </div>
+    </div>
+</fieldset></div>
+
+<button type="submit" class="btn btn-primary" id="sendMessageButton">Отправить</button>
+</form>
+{% endblock %}

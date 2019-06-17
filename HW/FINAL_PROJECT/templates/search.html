@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Выберите параметры поиска.</h1>
+<form method='GET'  action='/results' target="_blank">
+	<label>Название: <input type="text" name=""></label><br>
+	<label>ID: <input type="number" name=""></label><br>
+    <label>Год издания: <input type="number" name="year"></label><br>
+	<label>Язык: <input type="text" name="lang"></label><br>
+	<label>Город издания: <input type="text" name="city"></label><br>
+	<label>Фамилия автора: <input type="text" name="author"></label><br>
+    <button type="submit" class="btn btn-primary" id="sendMessageButton">Искать</button>
+</form>
+{% endblock %}

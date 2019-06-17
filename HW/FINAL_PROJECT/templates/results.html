@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="post-preview">
+<h2 class="post-title">Поиск по следующим параметрам</h2>
+<p class="post-subtitle"><ul>
+<li>Возраст: {{age}}</li>
+<li>Язык: {{lang1}}</li>
+<li>Город рождения: {{born}}</li>
+<li>Город проживания: {{habit}}</li>
+<li>Уровень образования: {{', '.join(edu)}}</li>
+<li>Статус (лингвист/не лингвист): {{ling}}</li>
+</u></p>
+</div>
+
+<div class="post-preview">
+<h2 class="post-title">Результаты</h2>
+<table>
+	{% for row in results %}
+	<tr>
+		{% for cell in row %}
+		<th>cell</th>
+		{% endfor %}
+	{% endfor %}
+</table>
+</div>
+{% endblock %}

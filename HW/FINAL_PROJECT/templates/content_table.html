@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<table>
+	<tr>
+		<th>bookid</th>
+		<th>name</th>
+		<th>author</th>
+		<th>year</th>
+		<th>owner</th>
+	</tr>
+	{% for row in all_table %}
+	<tr>
+		{% for cell in row %}
+		<th>{{cell}}</th>
+		{% endfor %}
+	{% endfor %}
+</table>
+{% endblock %}
