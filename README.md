@@ -9,7 +9,7 @@
 **3**|Газетный корпус|*[Папка](/HW/HW3)*
 **4**|Сайт-анкета|*[Папка](/HW/HW4)*
 **6**|VK API|*[Папка](/HW/HW6)*
-**0**|Финальный проект|*[Бот](Если я вам не отвечаю, перейдите по ссылке linguistics-library.herokuapp.com/reawaken и я проснусь! https://t.me/FIKL_library_bot)*
+**0**|Финальный проект|*[Бот](https://t.me/FIKL_library_bot)*
 
 
 ![](https://pp.userapi.com/c840120/v840120500/43f4a/MRCqUL4ABp0.jpg)
